@@ -1,24 +1,33 @@
-.grid img{
+.grid img {
     border: 2px solid #000000;
     border-radius: 50px;
 }
-.grid{
+
+.grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.origami{
+
+.origami {
     border-radius: 20px;
     background-color: rgb(238, 82, 134);
     padding: 30px;
     margin: 25px;
     width: 310px;
-    font-family: Baskeville Old Face;
+    font-family: "Baskerville Old Face", serif;
+    transition: transform 0.3s ease; /* Adds a smooth animation when hovering */
 }
+
+.origami:hover {
+    transform: scale(1.1);
+}
+
 h1 {
     color: rgb(238, 82, 134);
 }
-.menu{
+
+.menu {
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -27,20 +36,35 @@ h1 {
     font-weight: 400;
     text-decoration: none;
 }
-body{
+
+body {
     margin: 0px;
     background-color: grey;
 }
-.footer{
+
+/* Updated Footer Architecture */
+.footer {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
 }
-a:link{
-    color:mediumvioletred;
+
+.footer p {
+    margin: 10px 0;
+    text-align: center;
 }
-a:visited{
+
+.footer a {
+    align-self: flex-end; /* Ensures the "Top" arrow graphic stays pinned to the right side */
+    margin-right: 25px;
+}
+
+a:link {
+    color: mediumvioletred;
+}
+
+a:visited {
     color: darkblue;
-}
-.origami:hover{
-    transform: scale(1.1);
 }
